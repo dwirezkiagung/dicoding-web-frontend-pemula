@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bookshelf Apps - Belajar Membuat Front-End Web untuk Pemula</title>
+    <meta name="description" content="Belajar Membuat Front-End Web untuk Pemula Dicoding">
+    <meta name="author" content="Dwi Rezki Agung">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,800">
+    <link rel="stylesheet" href="css/style.css" id="theme-stylesheet">
+    <link rel="shortcut icon" href="img/favicon.png?3">
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar navbar-expand-lg px-4 py-4 bg-white shadow"><a href="index.html" class="navbar-brand font-weight-bold text-uppercase text-base">Bookshelf Apps</a></nav>
+    </header>
+    <div class="d-flex align-items-stretch">
+      <div class="page-holder w-100 d-flex flex-wrap">
+        <div class="container-fluid px-xl-5">
+          <section class="py-5">
+            <div class="row">
+
+              <div class="col-lg-8 mx-auto mb-5">
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="h6 text-uppercase text-center mb-0">Masukkan Buku Baru</h3>
+                  </div>
+                  <div class="card-body">
+                    <form class="form-horizontal" action="#" id="form">
+                      <div class="form-group row">
+                        <label class="col-md-3 form-control-label">Judul</label>
+                        <div class="col-md-9">
+                          <input type="text" id="title" name="title" placeholder="Judul" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 form-control-label">Penulis</label>
+                        <div class="col-md-9">
+                          <input type="text" id="author" name="author" placeholder="Penulis" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 form-control-label">Tahun</label>
+                        <div class="col-md-9">
+                          <input type="number" id="year" name="year" placeholder="Tahun" class="form-control" required>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-md-3 form-control-label">Selesai Dibaca?</label>
+                        <div class="col-md-9">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" id="isComplete" name="isComplete" onclick="makeChecked(this)">
+                          </label>
+                        </div>
+                      </div>
+                      <div class="line"></div>
+                      <div class="form-group row">
+                        <div class="col-md-9 ml-auto">
+                          <button type="submit" id="submit" name="submit" class="btn btn-primary"><span id="checkBold">Masukkan ke rak <b>Belum selesai dibaca</b></span></button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-8 mx-auto mb-5">
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="h6 text-uppercase text-center mb-0">Cari Buku</h3>
+                  </div>
+                  <div class="card-body">
+                    <form id="form-search">
+                      <div class="form-group form-inline">
+                        <input type="text" name="searchkey" class="form-control flex-fill mr-3" placeholder="Judul Buku" required/>
+                        <button type="submit" class="btn btn-primary">Cari</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-8 mx-auto mb-5">
+                <div class="card">
+                  <div class="card-header">
+                    <h2 class="h6 mb-0 text-uppercase text-center">Belum Selesai Dibaca</h2>
+                  </div>
+                  <div class="card-body" id="books"></div>
+                </div>
+              </div>
+
+              <div class="col-lg-8 mx-auto">
+                <div class="card mb-5 mb-lg-0">
+                  <div class="card-header">
+                    <h2 class="h6 mb-0 text-uppercase text-center">Selesai Dibaca</h2>
+                  </div>
+                  <div class="card-body" id="done-books"></div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+        </div>
+        <footer class="footer bg-white shadow align-self-end py-3 px-xl-5 w-100">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6 text-center text-md-left text-primary">
+                <p class="mb-2 mb-md-0">Bookshelf Apps &copy; 2021</p>
+              </div>
+              <div class="col-md-6 text-center text-md-right text-gray-400">
+                <p class="mb-0">Created by <a href="https://dwi.rezkiagung.com" class="external text-gray-400" target="_blank">Dwi Rezki Agung</a></p>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
